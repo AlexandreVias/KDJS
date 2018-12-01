@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Plugin jQuery</title>
+    <!--<link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1/jquery-ui.css">-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript">
+        $(document).ready(() => {
+
+            //Exercice 1
+            $("#div2").draggable({
+                containment: "parent",
+                drag: (event, ui) => $('#positions').text("x:" + ui.position.left + " y:" + ui.position.top)
+            });
+
+            //Exercice 2
+            (function($){
+                $.fn.growFont = function(){
+                    this.mouseover(() => this.css('font-size', parseInt(this.css('font-size')) + 1));
+                };
+            })(jQuery);
+            $("p").growFont();
+            $("a").growFont();
+
+        })
+    </script>
+</head>
+<body>
+    Positions :<span id="positions"></span>
+    <div id="div1">
+        <div id="div2">
+        </div>
+    </div>
+    <p>Du texte pour tester...</p>
+    <a>Un lien pour tester...</a>
+</body>
+</html>

@@ -1,0 +1,6 @@
+$(’div’).hover(function(){
+    $(this).children(’p’).each(function(){
+        console.log($(this).text());
+    });
+});
+--> Affiche dans la console le text des paragraphes quand on passe la souris dessus

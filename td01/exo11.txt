@@ -1,0 +1,11 @@
+$(’<strong>SUPER!</strong>’).appendTo(’li’);
+--> Ajoute "<strong>SUPER!</strong>" en html après chaque item (dedans)
+
+$(’<strong>OK!</strong>’).prependTo(’li’);
+--> --> Ajoute "<strong>OK!</strong>" en html avant chaque item (dedans)
+
+$(’<strong>HEY!</strong>’).insertBefore(’li’);
+--> Ajoute "<strong>HEY!</strong>" en html après chaque item (à l'extérieur)
+
+$(’<strong>OH!</strong>’).insertAfter(’li’);
+--> Ajoute "<strong>OH!</strong>" en html avant chaque item (à l'extérieur)

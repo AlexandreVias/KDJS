@@ -1,0 +1,18 @@
+console.log($(’ul’).text());
+--> Affiche le contenu de tous les 'ul'
+
+console.log($(’ul’).html());
+--> Affiche le contenu html de la balise 'ul'
+
+
+$(’p’).text(’<a href=‘‘#’’>lien</a>’);
+--> Remplace le text de tous les paragraphes par ’<a href=‘‘#’’>lien</a>’
+
+$(’p’).html(’<a href=‘‘#’’>lien</a>’);
+--> Remple tous les paragraphes par des liens
+
+console.log($(’input:text[name=nom]’).text());
+--> N'affiche rien
+
+console.log($(’input:text[name=nom]’).val());
+--> Affiche le contenu de le contenu du champ de saisi dont l'attribut "name" est "nom"

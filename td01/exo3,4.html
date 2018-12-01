@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exo 3 et 4</title>
+    <script type="application/javascript" language="JavaScript">
+
+        let Personne = {
+            nom: "Dupont",
+            prenom: "Michel",
+            dateNaissance: [1, 1, 1977],
+            taille: 186,
+            init: function (nom, prenom, dateNaissance) {
+                this.nom = nom;
+                this.prenom = prenom;
+                this.dateNaissance = dateNaissance;
+            },
+            decrireP: function () {
+              console.log(this.nom + " " + this.prenom + " " + this.dateNaissance);
+            },
+            direAge: function () {
+                console.log(new Date().getFullYear() - this.dateNaissance[2]);
+            }
+        }
+
+        let Professeur = Object.create(Personne);
+        Professeur.nom = "Honyme";
+        Professeur.prenom = "Anne";
+        Professeur.dateNaissance = [1,1,2000];
+        Professeur.mail = "anne.honyme@mail.fr";
+        Professeur.initProfesseur = function (nom, prenom, dateNaissance, mail) {
+            this.init(nom, prenom, dateNaissance);
+            this.mail = mail;
+        };
+        Professeur.decrire = function () {
+            this.decrireP();
+            console.log(" " + this.mail);
+        };
+
+        let prof1 = Object.create(Professeur);
+        let prof2 = Object.create(Professeur);
+        prof1.decrire();
+        prof1.direAge();
+
+        //Les attributs "taille" et "direAge" sont définis pour les porfesseurs grâce à l'héritage.
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

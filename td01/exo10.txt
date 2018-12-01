@@ -1,0 +1,14 @@
+$(’p’).append(’Javascript<br />’);
+--> Ajoute "Javascript" après chaque paragraphe
+
+$(’p’).prepend(’<br />Javascript’);
+--> Ajoute "Javascript" avant chaque paragraphe
+
+$(’p’).remove();
+--> Supprime tous les paragraphes
+
+$(’ul’).before(’Before’);
+--> Ajoute "Before" en html avant chaque liste
+
+$(’ul’).after(’After’);
+--> Ajoute "after" en html après chaque liste

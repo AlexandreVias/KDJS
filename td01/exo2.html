@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>exo2</title>
+    <script type="application/javascript" language="JavaScript">
+        function Etudiant(nom, prenom, num, dateNaiss){
+            this.nom = nom;
+            this.prenom = prenom;
+            this.num = num;
+            this.dateNaiss = dateNaiss;
+            this.presenter = function(){
+                console.log(this.nom + " " + this.prenom + " " + this.num + " " + this.dateNaiss[0] + "/" + this.dateNaiss[1] + "/" + this.dateNaiss[2]);
+            };
+            this.age = function(){
+                return new Date().getFullYear() - dateNaiss[2];
+            };
+        }
+
+        let etu1 = new Etudiant("Vias", "Alexandre", "1", [10,3,1998]);
+        let etu2 = new Etudiant("Honyme", "Anne", "2", [1,1,2000]);
+        console.log(etu1.presenter());
+        console.log(etu1.age());
+    </script>
+</head>
+<body>
+
+</body>
+</html>
